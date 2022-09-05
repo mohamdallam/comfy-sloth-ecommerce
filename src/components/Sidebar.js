@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
+import { useProductsContext } from "../context/products_context";
 
 const Sidebar = () => {
+  const data = useProductsContext();
   const isOpen = false;
   return (
     <SidebarContainer>
