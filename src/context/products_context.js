@@ -1,5 +1,6 @@
 import reducer from "../reducers/products_reducer";
-import React, { useContext, createContext, useReducer, useEffect } from "react";
+
+import React, { useContext, createContext, useEffect, useReducer } from "react";
 
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../actions";
 
@@ -30,7 +31,7 @@ export const ProductsProvider = ({ children }) => {
     </ProductsContext.Provider>
   );
 };
-
+// make sure use
 export const useProductsContext = () => {
   return useContext(ProductsContext);
 };

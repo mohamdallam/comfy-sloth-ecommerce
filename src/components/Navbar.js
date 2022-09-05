@@ -5,8 +5,10 @@ import logo from "../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
+import { useProductsContext } from "../context/products_context";
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext();
   return (
     <NavContainer>
       <div className="nav-center">
@@ -15,7 +17,7 @@ const Navbar = () => {
             <img src={logo} alt="" />
           </Link>
 
-          <button type="button" className="nav-toggle">
+          <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
