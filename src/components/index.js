@@ -13,6 +13,7 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import AddToCart from "./AddToCart";
 import Stars from "./Stars";
+import AmountButtons from "./AmountButtons";
 
 export {
   Footer,
@@ -30,4 +31,5 @@ export {
   ProductImages,
   AddToCart,
   Stars,
+  AmountButtons,
 };
