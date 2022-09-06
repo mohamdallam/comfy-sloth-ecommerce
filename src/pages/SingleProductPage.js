@@ -69,6 +69,7 @@ const SingleProductPage = () => {
 
         <div className=" product-center">
           <ProductImages images={images} />
+
           <section className="content">
             <h2>{name}</h2>
             <Stars stars={stars} reviews={reviews} />
@@ -132,6 +133,7 @@ const Wrapper = styled.main`
       grid-template-columns: 1fr 1fr;
       align-items: center;
     }
+
     .price {
       font-size: 1.25rem;
     }
