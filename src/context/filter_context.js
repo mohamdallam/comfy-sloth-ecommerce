@@ -35,6 +35,7 @@ export const FilterProvider = ({ children }) => {
   const setGridView = () => {
     dispatch({ type: SET_GRIDVIEW });
   };
+
   const setListView = () => {
     dispatch({ type: SET_LISTVIEW });
   };
