@@ -7,6 +7,9 @@ import FeaturedProducts from "./FeaturedProducts";
 import Hero from "./Hero";
 import Services from "./Services";
 import Contact from "./Contact";
+import Error from "./Error";
+import Loading from "./Loading";
+import Product from "./Product";
 
 export {
   Footer,
@@ -18,4 +21,7 @@ export {
   Hero,
   Services,
   Contact,
+  Error,
+  Loading,
+  Product,
 };
