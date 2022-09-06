@@ -19,6 +19,7 @@ const AddToCart = ({ product }) => {
       return tempAmount;
     });
   };
+
   const decrease = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount - 1;
