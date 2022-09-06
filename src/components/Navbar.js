@@ -9,19 +9,23 @@ import { useProductsContext } from "../context/products_context";
 
 const Navbar = () => {
   const { openSidebar } = useProductsContext();
+
   return (
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
+          {/* Logo */}
           <Link to="/">
             <img src={logo} alt="" />
           </Link>
 
+          {/* Sidebar Button toggle   */}
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
 
+        {/* Nav Link Center */}
         <ul className="nav-links">
           {links.map((link) => {
             const { id, text, url } = link;
@@ -33,6 +37,7 @@ const Navbar = () => {
           })}
         </ul>
 
+        {/* Right Buttons ( Cart & Login ) */}
         <CartButtons />
       </div>
     </NavContainer>
@@ -67,6 +72,7 @@ const NavContainer = styled.nav`
     border: transparent;
     color: var(--clr-primary-5);
     cursor: pointer;
+
     svg {
       font-size: 2rem;
     }
@@ -94,9 +100,11 @@ const NavContainer = styled.nav`
     .nav-links {
       display: flex;
       justify-content: center;
+
       li {
         margin: 0 0.5rem;
       }
+
       a {
         color: var(--clr-grey-3);
         font-size: 1rem;
