@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
+import { FaShoppingCart, FaUserPlus } from "react-icons/fa";
 
 const CartButtons = () => {
   return (
@@ -36,7 +36,6 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     color: var(--clr-grey-1);
     display: flex;
-
     align-items: center;
   }
 
@@ -44,6 +43,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     position: relative;
+
     svg {
       height: 1.6rem;
       margin-left: 5px;
