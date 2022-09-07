@@ -19,6 +19,10 @@ import Filters from "./Filters";
 import Sort from "./Sort";
 import ListView from "./ListView";
 import GridView from "./GridView";
+import CartContent from "./CarContent";
+import CartItem from "./CartItem";
+import CartColumns from "./CartColumns";
+import CartTotals from "./CartTotals";
 
 export {
   Footer,
@@ -42,4 +46,8 @@ export {
   Sort,
   ListView,
   GridView,
+  CartContent,
+  CartItem,
+  CartColumns,
+  CartTotals,
 };
