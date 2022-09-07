@@ -11,6 +11,7 @@ import {
 } from "../actions";
 
 const filter_reducer = (state, action) => {
+  /////////////////////////////////////////
   //   TODO:: Load Products   ///////////
   if (action.type === LOAD_PRODUCTS) {
     let maxPrice = action.payload.map((p) => p.price);
@@ -86,14 +87,15 @@ const filter_reducer = (state, action) => {
     const { all_products } = state;
     const { text, category, company, color, price, shipping } = state.filters;
 
-    let tempProducts = [...all_products];
     // filtering
+    let tempProducts = [...all_products];
     // text
     if (text) {
       tempProducts = tempProducts.filter((product) => {
         return product.name.toLowerCase().startsWith(text);
       });
     }
+
     // category
     if (category !== "all") {
       tempProducts = tempProducts.filter(
@@ -107,12 +109,14 @@ const filter_reducer = (state, action) => {
         (product) => product.company === company
       );
     }
+
     // colors
     if (color !== "all") {
       tempProducts = tempProducts.filter((product) => {
         return product.colors.find((c) => c === color);
       });
     }
+
     // price
     tempProducts = tempProducts.filter((product) => product.price <= price);
     // shipping
@@ -125,7 +129,7 @@ const filter_reducer = (state, action) => {
     return { ...state, filtered_products: tempProducts };
   }
 
-  //   TODO:: Sort By Clear Filters    ///////////
+  //   TODO:: Clear Filters    ///////////
   if (action.type === CLEAR_FILTERS) {
     return {
       ...state,
