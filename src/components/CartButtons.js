@@ -1,29 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+import { useCartContext } from "../context/cart_context";
 import { FaShoppingCart, FaUserPlus } from "react-icons/fa";
+import { useProductsContext } from "../context/products_context";
 
 const CartButtons = () => {
+  const { closeSidebar } = useProductsContext();
+  const { total_items, clearCart } = useCartContext();
+
   return (
     <Wrapper className="cart-btn-wrapper">
-      {/* Cart Icon */}
-      <Link to="/cart" className="cart-btn">
+      <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         Cart
         <span className="cart-container">
           <FaShoppingCart />
-          <span className="cart-value">12</span>
+          <span className="cart-value">{total_items}</span>
         </span>
       </Link>
-
-      {/* Login button */}
-      <button type="button" className="auth-btn">
-        Login
-        <FaUserPlus />
-      </button>
     </Wrapper>
   );
 };
-
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
